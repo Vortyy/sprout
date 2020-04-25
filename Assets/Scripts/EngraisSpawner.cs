@@ -7,11 +7,11 @@ public class EngraisSpawner : MonoBehaviour
     [SerializeField] GameObject engrais;
     private float engraisHeight;
 
-    private void Awake()
+    private void Start()
     {
         spawnEngrais();
     }
-    void Update()
+    private void Update()
     {
         GameObject engrais = GameObject.FindGameObjectWithTag("Healing");
 

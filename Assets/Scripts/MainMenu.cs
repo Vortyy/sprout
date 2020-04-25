@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void LoadInstructions()
+    public void ControlsMenu()
     {
-        SceneManager.LoadScene(1); // Loads scene 1 with the game's instructions
-    }
 
+    }
     public void PlayGame()
     {
-        SceneManager.LoadScene(2); // Loads scene 2 with the actual game
+        SceneManager.LoadScene(1); // Loads scene 1 with the actual game
     }
 
     public void QuitGame()

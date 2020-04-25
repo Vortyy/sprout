@@ -15,7 +15,7 @@ public class DeathMenu : MonoBehaviour
     }
     public void PlayAgain()
     {
-        SceneManager.LoadScene(2); // Reloads the scene 2 with the game
+        SceneManager.LoadScene(1); // Reloads the scene 1 with the game
     }
    public void MainMenu()
     {

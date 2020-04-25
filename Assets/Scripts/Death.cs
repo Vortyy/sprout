@@ -19,19 +19,15 @@ public class Death : MonoBehaviour
         healthbar = player.GetComponent<Healthbar>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (healthbar.dead)
         {
-            DeathSequence();
+            // Initiate death sequence 
+            soundtrack.gameObject.SetActive(false);
+            deathSound.gameObject.SetActive(true);
+            StartCoroutine(DeathCoroutine());
         }
-    }
-    public void DeathSequence()
-    {
-        // Initiate death sequence 
-        soundtrack.gameObject.SetActive(false);
-        deathSound.gameObject.SetActive(true);
-        StartCoroutine(DeathCoroutine());
     }
 
     IEnumerator DeathCoroutine()

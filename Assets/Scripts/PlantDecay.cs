@@ -8,7 +8,8 @@ public class PlantDecay : MonoBehaviour
     public float damagePerSecond = 1f;
     public float multiplier = 1f;
     public bool stopped;
-    void Awake()
+
+    void Start()
     {
         healthbar = GetComponent<Healthbar>();
         StartCoroutine(DecayAcceleration());
