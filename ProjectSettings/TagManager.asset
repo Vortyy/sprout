@@ -8,6 +8,7 @@ TagManager:
   - Healing
   - Wall
   - Pickup
+  - Healthbar
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = false;
     public float healValue = 20f;
 
-    void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -25,7 +25,9 @@ public class PlayerController : MonoBehaviour
         jump = GetComponent<AudioSource>();
     }
 
-    void Update()
+
+
+    private void Update()
     {
         // Jump
         if (rb.velocity.y < 0)
@@ -82,7 +84,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Detect collision with floor
-    void OnCollisionEnter2D(Collision2D hit)
+    private void OnCollisionEnter2D(Collision2D hit)
     {
         if (hit.gameObject.tag == "Ground")
         {

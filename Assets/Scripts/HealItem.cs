@@ -10,11 +10,15 @@ public class HealItem : MonoBehaviour
     GameObject player;
     Healthbar healthbar;
 
-    private void Start()
+    private void Awake()
     {
         pickup = GameObject.FindGameObjectWithTag("Pickup");
-        pickupSound = pickup.GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    private void Start()
+    {
+        pickupSound = pickup.GetComponent<AudioSource>();
         healthbar = player.GetComponent<Healthbar>();
     }
 
