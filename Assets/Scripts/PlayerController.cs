@@ -17,16 +17,11 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = false;
     public float healValue = 20f;
 
-    private void Awake()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         healthbar = GetComponent<Healthbar>();
-        
-    }
-
-    private void Start()
-    {
         jump = GetComponent<AudioSource>();
     }
 

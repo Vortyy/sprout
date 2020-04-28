@@ -13,7 +13,7 @@ public class HealItem : MonoBehaviour
     private void Awake()
     {
         pickup = GameObject.FindGameObjectWithTag("Pickup");
-        player = GameObject.FindGameObjectWithTag("Player");     
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Start()

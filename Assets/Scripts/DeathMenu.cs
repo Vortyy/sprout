@@ -9,7 +9,7 @@ public class DeathMenu : MonoBehaviour
     [SerializeField] TimeCounter timeCounter;
     [SerializeField] TextMeshProUGUI timeScore;
 
-    private void Awake()
+    private void Start()
     {
         timeScore.text = "Time: " + (timeCounter.score / 60).ToString() + "m " + (timeCounter.score % 60).ToString() + "s";
     }
